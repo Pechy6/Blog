@@ -1,0 +1,28 @@
+# Build
+**/bin/
+**/obj/
+
+# Rider / IDE
+.idea/
+*.sln.iml
+
+# User-specific
+*.user
+*.userosscache
+*.suo
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# ASP.NET development config
+**/appsettings.Development.json
+
+# Local databases
+**/*.db
+
+# VS Code
+.vscode/
+
