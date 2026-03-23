@@ -11,14 +11,18 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Contact()
     {
         return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    public IActionResult Skills()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View();   
+    }
+
+    public IActionResult References()
+    {
+        return View();  
     }
 }
