@@ -1,36 +1,12 @@
 @model AspBlog.Models.Entities.Article
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = Model.Title;
 }
+<div class="mt-3"><b>Nazev:</b> @Html.DisplayFor(model => model.Title)</div>
+<div class="mt-3"><b>Popisek:</b> <small>@Html.DisplayFor(model => model.Description)</small></div>
+<div class="mt-3"><b>Obsah:</b> @Html.DisplayFor(model => model.Content)</div>
 
-<h1>Details</h1>
+<a class="d-inline-block clanky-tlacitko" asp-action="Index">Zpet na seznam</a>
 
-<div>
-    <h4>Article</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
